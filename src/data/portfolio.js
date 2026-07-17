@@ -46,7 +46,7 @@ export const experience = [
     role: 'Java Full Stack Developer Intern',
     company: 'Dhee Coding Labs',
     duration: 'Mar 2026 – Present',
-    location: 'Online',
+    location: 'Bengaluru, India',
     type: 'Full Stack',
     current: true,
     points: [
