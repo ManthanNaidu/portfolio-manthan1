@@ -1,9 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Sora:wght@400;600;700;800&display=swap');
 @import "tailwindcss";
 
-* {
-  scroll-behavior: smooth;
-}
+/* ── Base ───────────────────────────────────────────────────────── */
+* { scroll-behavior: smooth; }
 
 body {
   font-family: 'Inter', sans-serif;
@@ -12,17 +11,18 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-h1, h2, h3, h4 {
-  font-family: 'Sora', sans-serif;
-}
+h1, h2, h3, h4 { font-family: 'Sora', sans-serif; }
 
-::-webkit-scrollbar { width: 6px; }
+/* ── Scrollbar ──────────────────────────────────────────────────── */
+::-webkit-scrollbar { width: 5px; }
 ::-webkit-scrollbar-track { background: #F1F5F9; }
 ::-webkit-scrollbar-thumb { background: #CBD5E1; border-radius: 6px; }
 ::-webkit-scrollbar-thumb:hover { background: #94A3B8; }
 
+/* ── Layout helpers ─────────────────────────────────────────────── */
 .section-pad { padding: 5rem 0; }
 
+/* ── Gradient text ──────────────────────────────────────────────── */
 .gradient-text {
   background: linear-gradient(135deg, #1D4ED8 0%, #6366F1 100%);
   -webkit-background-clip: text;
@@ -30,14 +30,16 @@ h1, h2, h3, h4 {
   background-clip: text;
 }
 
+/* ── Card hover ─────────────────────────────────────────────────── */
 .card-hover {
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition: transform 0.22s ease, box-shadow 0.22s ease;
 }
 .card-hover:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 12px 28px rgba(0,0,0,0.10);
+  transform: translateY(-4px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.10);
 }
 
+/* ── Nav link ───────────────────────────────────────────────────── */
 .nav-link {
   position: relative;
   font-size: 0.875rem;
@@ -50,17 +52,16 @@ h1, h2, h3, h4 {
 .nav-link::after {
   content: '';
   position: absolute;
-  bottom: -2px;
-  left: 0;
-  width: 0;
-  height: 2px;
+  bottom: -2px; left: 0;
+  width: 0; height: 2px;
   background: #2563EB;
   border-radius: 2px;
-  transition: width 0.2s ease;
+  transition: width 0.22s ease;
 }
 .nav-link:hover { color: #2563EB; }
 .nav-link:hover::after { width: 100%; }
 
+/* ── Tag pill ───────────────────────────────────────────────────── */
 .tag {
   display: inline-flex;
   align-items: center;
@@ -71,6 +72,7 @@ h1, h2, h3, h4 {
   letter-spacing: 0.01em;
 }
 
+/* ── Section badge ──────────────────────────────────────────────── */
 .section-badge {
   display: inline-flex;
   align-items: center;
@@ -85,4 +87,85 @@ h1, h2, h3, h4 {
   color: #2563EB;
   border: 1px solid #BFDBFE;
   margin-bottom: 12px;
+}
+
+/* ── Animated gradient border on photo ─────────────────────────── */
+@keyframes spin-border {
+  0%   { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.photo-ring {
+  position: relative;
+  padding: 3px;
+  border-radius: 20px;
+}
+.photo-ring::before {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  border-radius: 22px;
+  background: linear-gradient(135deg, #3B82F6, #8B5CF6, #06B6D4, #3B82F6);
+  background-size: 300% 300%;
+  animation: gradient-rotate 3s linear infinite;
+  z-index: 0;
+}
+@keyframes gradient-rotate {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+.photo-ring > * { position: relative; z-index: 1; }
+
+/* ── Typewriter cursor ──────────────────────────────────────────── */
+.typewriter-cursor {
+  display: inline-block;
+  width: 2px;
+  height: 1em;
+  background: #2563EB;
+  margin-left: 3px;
+  border-radius: 2px;
+  vertical-align: middle;
+  animation: blink 1s step-end infinite;
+}
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
+}
+
+/* ── Floating dots animation ────────────────────────────────────── */
+@keyframes float-up {
+  0%   { transform: translateY(0px); opacity: 0.6; }
+  50%  { transform: translateY(-12px); opacity: 1; }
+  100% { transform: translateY(0px); opacity: 0.6; }
+}
+.float-1 { animation: float-up 3.2s ease-in-out infinite; }
+.float-2 { animation: float-up 3.2s ease-in-out 0.6s infinite; }
+.float-3 { animation: float-up 3.2s ease-in-out 1.2s infinite; }
+
+/* ── Shimmer on skill bars ──────────────────────────────────────── */
+@keyframes shimmer {
+  0%   { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+.skill-bar-animated {
+  background: linear-gradient(90deg, currentColor 25%, rgba(255,255,255,0.4) 50%, currentColor 75%);
+  background-size: 200% auto;
+  animation: shimmer 2.5s linear infinite;
+}
+
+/* ── Section fade-in ────────────────────────────────────────────── */
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.fade-up { animation: fade-up 0.55s ease forwards; }
+
+/* ── Glow button ────────────────────────────────────────────────── */
+.btn-glow {
+  box-shadow: 0 0 0 0 rgba(37,99,235,0.4);
+  transition: box-shadow 0.3s ease, background-color 0.2s ease;
+}
+.btn-glow:hover {
+  box-shadow: 0 0 20px 4px rgba(37,99,235,0.25);
 }

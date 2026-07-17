@@ -63,7 +63,7 @@ export default function Skills() {
             'Java','Python','JavaScript','SQL','HTML/CSS',
             'REST API','MySQL','MongoDB','JDBC','Thymeleaf','Servlet/JSP',
             'Scikit-learn','TensorFlow','Pandas','NumPy','NLP','XGBoost',
-            'Git','Docker','Postman','Streamlit','Plotly','Jupyter',
+            'Git & GitHub','VS Code','IntelliJ IDEA','Streamlit','Plotly','Jupyter',
           ].map((tech) => (
             <span
               key={tech}

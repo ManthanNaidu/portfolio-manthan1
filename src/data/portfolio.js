@@ -13,8 +13,8 @@ export const personal = {
   available: true,
   resumeJava: '/resume-java.pdf',
   resumeML: '/resume-ml.pdf',
-  // ── Place your photo at public/profile.jpg, then set this to '/profile.jpg' ──
-  photo: null, // e.g. '/profile.jpg'
+  // ── Profile photo ──
+  photo: '/profile.jpg',
 };
 
 export const education = [
@@ -44,27 +44,29 @@ export const education = [
 export const experience = [
   {
     role: 'Java Full Stack Developer Intern',
-    company: 'Global Next Consulting',
-    duration: 'Jan 2025 – Apr 2025',
-    location: 'Remote',
+    company: 'Dhee Coding Labs',
+    duration: 'Mar 2026 – Present',
+    location: 'Online',
     type: 'Full Stack',
+    current: true,
     points: [
-      'Developed RESTful APIs using Java for a client HR management system, reducing processing time by 40%.',
-      'Built responsive UI with JavaScript and integrated with backend via Axios, improving UX for 500+ users.',
-      'Collaborated with senior developers on database design using MySQL, implementing optimized queries and indexing.',
-      'Participated in Agile sprints, code reviews, and daily standups with a cross-functional team.',
+      'Building RESTful APIs using Java and servlet-based architecture for client-facing enterprise applications.',
+      'Developing responsive web interfaces with HTML, CSS, and JavaScript integrated with backend services.',
+      'Working on database design and query optimisation using MySQL for high-volume transactional systems.',
+      'Participating in Agile sprints, code reviews, and daily standups with a cross-functional team.',
     ],
   },
   {
-    role: 'AI/ML Engineering Intern',
-    company: 'Dhee Coding Lab',
-    duration: 'Jun 2024 – Sep 2024',
-    location: 'Bengaluru, India',
+    role: 'AI / ML Intern',
+    company: 'Global Next Consulting India Private Limited',
+    duration: 'Aug 2025 – Oct 2025',
+    location: 'Online',
     type: 'AI/ML',
+    current: false,
     points: [
       'Built and deployed ML models for customer segmentation using K-Means and DBSCAN achieving 87% silhouette score.',
       'Implemented NLP pipeline for text classification using Python, NLTK, and Scikit-learn.',
-      'Created data visualization dashboards using Matplotlib and Seaborn for presenting model insights to stakeholders.',
+      'Created data visualisation dashboards with Matplotlib and Seaborn for presenting model insights to stakeholders.',
       'Preprocessed and cleaned 50K+ records from real-world datasets to improve model accuracy by 18%.',
     ],
   },
@@ -149,8 +151,6 @@ export const skills = {
   ],
   'Tools & DevOps': [
     { name: 'Git & GitHub', level: 88 },
-    { name: 'Docker', level: 65 },
-    { name: 'Postman', level: 85 },
     { name: 'VS Code', level: 92 },
     { name: 'IntelliJ IDEA', level: 88 },
     { name: 'Jupyter', level: 85 },
@@ -189,4 +189,19 @@ export const stats = [
   { value: '5',    label: 'Projects Built', suffix: '+' },
   { value: '2',    label: 'Internships', suffix: '' },
   { value: '4',    label: 'Certifications', suffix: '' },
+];
+
+export const achievements = [
+  {
+    title: 'Winner — Inter-College Technical Quiz Competition',
+    description: 'Secured 1st place in a competitive technical quiz across multiple colleges, demonstrating strong knowledge in CS fundamentals and emerging technologies.',
+    icon: 'trophy',
+    color: 'amber',
+  },
+  {
+    title: 'Winner — Technical Quiz Competition, GSSS',
+    description: 'Won the Technical Quiz Competition at GSSS, showcasing expertise in programming, algorithms, and AI/ML concepts.',
+    icon: 'medal',
+    color: 'blue',
+  },
 ];
