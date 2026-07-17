@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { ArrowDown, Link2, MapPin, Code2, Brain, Camera } from 'lucide-react';
+import { ArrowDown, Link2, MapPin, Code2, Brain, Camera, Download } from 'lucide-react';
 import { personal, stats } from '../data/portfolio';
 
 const ROLES = [
@@ -164,7 +164,29 @@ export default function Hero() {
           </a>
         </div>
 
-        {/* Stats row */}
+        {/* ── Resume download strip ─────────────────────────────── */}
+        <div className="flex flex-wrap items-center justify-center gap-3 mb-10">
+          <span className="text-xs text-gray-400 font-semibold uppercase tracking-widest w-full text-center mb-1">Download Resume</span>
+          <a
+            href={personal.resumeJava}
+            download="Manthan_Java_Resume.pdf"
+            className="flex items-center gap-2 px-5 py-2.5 rounded-xl bg-blue-50 border border-blue-200 text-blue-700 text-sm font-bold hover:bg-blue-100 hover:border-blue-400 transition-all duration-200 shadow-sm group"
+          >
+            <Code2 className="w-4 h-4" />
+            Java Full Stack Resume
+            <Download className="w-3.5 h-3.5 opacity-50 group-hover:opacity-100 group-hover:translate-y-0.5 transition-all" />
+          </a>
+          <a
+            href={personal.resumeML}
+            download="Manthan_AIML_Resume.pdf"
+            className="flex items-center gap-2 px-5 py-2.5 rounded-xl bg-purple-50 border border-purple-200 text-purple-700 text-sm font-bold hover:bg-purple-100 hover:border-purple-400 transition-all duration-200 shadow-sm group"
+          >
+            <Brain className="w-4 h-4" />
+            AI / ML Resume
+            <Download className="w-3.5 h-3.5 opacity-50 group-hover:opacity-100 group-hover:translate-y-0.5 transition-all" />
+          </a>
+        </div>
+
         <div className="w-full max-w-2xl bg-white rounded-2xl shadow-md border border-gray-100 overflow-hidden">
           <div className="grid grid-cols-4 divide-x divide-gray-100">
             {stats.map((stat) => (
