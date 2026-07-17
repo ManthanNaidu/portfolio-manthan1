@@ -21,21 +21,21 @@ export const education = [
   {
     degree: 'Bachelor of Engineering — Computer Science & Engineering',
     institution: 'Visvesvaraya Technological University (VTU)',
-    duration: '2021 – 2025',
+    duration: '2022 – 2026',
     cgpa: '8.91 / 10',
     location: 'Karnataka, India',
   },
   {
     degree: 'Pre-University (Science)',
     institution: 'St. Johns Composite PU College',
-    duration: '2019 – 2021',
+    duration: '2021 – 2022',
     cgpa: '81%',
     location: 'Karnataka, India',
   },
   {
     degree: 'SSLC (10th Standard)',
     institution: 'Daffodils English High School',
-    duration: '2018 – 2019',
+    duration: '2020',
     cgpa: '89.44%',
     location: 'Karnataka, India',
   },
@@ -121,26 +121,6 @@ export const projects = [
     github: 'https://github.com/ManthanNaidu',
     featured: false,
   },
-  {
-    title: 'Sentiment Analysis Dashboard',
-    description:
-      'Real-time sentiment analysis tool for social media data using NLP. Classifies tweets and reviews as positive, negative, or neutral with confidence scores and live trend graphs.',
-    tech: ['Python', 'NLTK', 'TextBlob', 'Pandas', 'Streamlit', 'Plotly'],
-    type: 'AI/ML',
-    live: null,
-    github: 'https://github.com/ManthanNaidu',
-    featured: false,
-  },
-  {
-    title: 'Inventory Management System',
-    description:
-      'A Java-based inventory tracking system for small businesses with barcode scanning support, stock alerts, purchase order management, and sales reporting dashboard.',
-    tech: ['Java', 'MySQL', 'JDBC', 'Swing UI', 'REST API'],
-    type: 'Full Stack',
-    live: null,
-    github: 'https://github.com/ManthanNaidu',
-    featured: false,
-  },
 ];
 
 export const skills = {
@@ -179,40 +159,34 @@ export const skills = {
 
 export const certifications = [
   {
-    name: 'Google AI Essentials',
-    issuer: 'Google',
-    year: '2024',
-    color: 'blue',
-  },
-  {
-    name: 'NVIDIA — Fundamentals of Deep Learning',
+    name: 'Building LLM Applications with Prompt Engineering',
     issuer: 'NVIDIA',
-    year: '2024',
+    year: '2025',
     color: 'green',
   },
   {
-    name: 'Microsoft Azure AI Fundamentals (AI-900)',
-    issuer: 'Microsoft',
-    year: '2024',
+    name: 'Build Real-World Applications with Gemini and Imagen',
+    issuer: 'Google',
+    year: '2025',
+    color: 'blue',
+  },
+  {
+    name: 'Prompt Design in Vertex AI',
+    issuer: 'Google',
+    year: '2025',
     color: 'indigo',
   },
   {
-    name: 'Java Full Stack Development',
-    issuer: 'Udemy',
-    year: '2023',
-    color: 'orange',
-  },
-  {
-    name: 'Machine Learning Specialization',
-    issuer: 'Coursera (Stanford)',
-    year: '2024',
+    name: 'Career Essentials in Generative AI',
+    issuer: 'Microsoft & LinkedIn',
+    year: '2025',
     color: 'purple',
   },
 ];
 
 export const stats = [
   { value: '8.91', label: 'CGPA / 10', suffix: '' },
-  { value: '7',    label: 'Projects Built', suffix: '+' },
+  { value: '5',    label: 'Projects Built', suffix: '+' },
   { value: '2',    label: 'Internships', suffix: '' },
-  { value: '5',    label: 'Certifications', suffix: '+' },
+  { value: '4',    label: 'Certifications', suffix: '' },
 ];
