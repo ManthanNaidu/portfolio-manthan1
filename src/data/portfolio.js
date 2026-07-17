@@ -4,15 +4,17 @@
 
 export const personal = {
   name: 'Manthan M Y',
-  tagline: 'Java Full Stack Developer & AI/ML Engineer',
-  bio: "I'm a Computer Science graduate with hands-on experience building scalable full-stack applications with Java & Spring Boot, and end-to-end machine learning pipelines. I love turning complex problems into clean, impactful software.",
+  tagline: 'Java Developer & AI/ML Engineer',
+  bio: "I'm a Computer Science graduate with hands-on experience building scalable full-stack applications with Java and end-to-end machine learning pipelines. I love turning complex problems into clean, impactful software.",
   email: 'manthanmymanthan@gmail.com',
   github: 'https://github.com/ManthanNaidu',
-  linkedin: 'https://linkedin.com/in/manthan-m-y',
+  linkedin: 'https://www.linkedin.com/in/manthan-m-y-935a262ba/',
   location: 'Bengaluru, Karnataka, India',
   available: true,
   resumeJava: '/resume-java.pdf',
   resumeML: '/resume-ml.pdf',
+  // ── Place your photo at public/profile.jpg, then set this to '/profile.jpg' ──
+  photo: null, // e.g. '/profile.jpg'
 };
 
 export const education = [
@@ -24,10 +26,17 @@ export const education = [
     location: 'Karnataka, India',
   },
   {
-    degree: 'Pre-University (PCMB)',
-    institution: 'Sri Siddhartha Independent PU College',
+    degree: 'Pre-University (Science)',
+    institution: 'St. Johns Composite PU College',
     duration: '2019 – 2021',
-    cgpa: '95%',
+    cgpa: '81%',
+    location: 'Karnataka, India',
+  },
+  {
+    degree: 'SSLC (10th Standard)',
+    institution: 'Daffodils English High School',
+    duration: '2018 – 2019',
+    cgpa: '89.44%',
     location: 'Karnataka, India',
   },
 ];
@@ -40,8 +49,8 @@ export const experience = [
     location: 'Remote',
     type: 'Full Stack',
     points: [
-      'Developed RESTful APIs using Spring Boot for a client HR management system, reducing processing time by 40%.',
-      'Built responsive UI with React.js and integrated with backend via Axios, improving UX for 500+ users.',
+      'Developed RESTful APIs using Java for a client HR management system, reducing processing time by 40%.',
+      'Built responsive UI with JavaScript and integrated with backend via Axios, improving UX for 500+ users.',
       'Collaborated with senior developers on database design using MySQL, implementing optimized queries and indexing.',
       'Participated in Agile sprints, code reviews, and daily standups with a cross-functional team.',
     ],
@@ -66,7 +75,7 @@ export const projects = [
     title: 'ATS Resume Optimizer',
     description:
       'A production-grade web app that analyzes resumes against job descriptions, gives ATS match scores, identifies missing keywords, and generates complete tailored resumes from JDs — all client-side, no backend.',
-    tech: ['React', 'Vite', 'Tailwind CSS', 'jsPDF', 'NLP Algorithms'],
+    tech: ['Vite', 'Tailwind CSS', 'jsPDF', 'NLP Algorithms', 'JavaScript'],
     type: 'Full Stack',
     live: 'https://ats-optimizer1.vercel.app',
     github: 'https://github.com/ManthanNaidu/ats-optimizer1',
@@ -75,8 +84,8 @@ export const projects = [
   {
     title: 'Payroll Management System',
     description:
-      'A full-stack enterprise payroll system with role-based access control, automated salary calculation, tax deductions, and PDF payslip generation. Built with Spring Boot MVC and MySQL.',
-    tech: ['Java', 'Spring Boot', 'MySQL', 'Hibernate', 'Thymeleaf', 'REST API'],
+      'An enterprise payroll system with role-based access control, automated salary calculation, tax deductions, and PDF payslip generation. Built with Java MVC and MySQL.',
+    tech: ['Java', 'MySQL', 'Thymeleaf', 'REST API', 'HTML/CSS'],
     type: 'Full Stack',
     live: null,
     github: 'https://github.com/ManthanNaidu',
@@ -100,13 +109,33 @@ export const projects = [
     type: 'AI/ML',
     live: null,
     github: 'https://github.com/ManthanNaidu',
-    featured: false,
+    featured: true,
   },
   {
     title: 'Student Management Portal',
     description:
-      'Full-stack web portal for managing student records, attendance, grades, and notifications. Includes RESTful API backend with Spring Boot and a React frontend with real-time search.',
-    tech: ['Java', 'Spring Boot', 'React', 'MySQL', 'REST API'],
+      'Full-stack web portal for managing student records, attendance, grades, and notifications. Includes RESTful API backend with Java and real-time search functionality.',
+    tech: ['Java', 'MySQL', 'REST API', 'HTML/CSS', 'JavaScript'],
+    type: 'Full Stack',
+    live: null,
+    github: 'https://github.com/ManthanNaidu',
+    featured: false,
+  },
+  {
+    title: 'Sentiment Analysis Dashboard',
+    description:
+      'Real-time sentiment analysis tool for social media data using NLP. Classifies tweets and reviews as positive, negative, or neutral with confidence scores and live trend graphs.',
+    tech: ['Python', 'NLTK', 'TextBlob', 'Pandas', 'Streamlit', 'Plotly'],
+    type: 'AI/ML',
+    live: null,
+    github: 'https://github.com/ManthanNaidu',
+    featured: false,
+  },
+  {
+    title: 'Inventory Management System',
+    description:
+      'A Java-based inventory tracking system for small businesses with barcode scanning support, stock alerts, purchase order management, and sales reporting dashboard.',
+    tech: ['Java', 'MySQL', 'JDBC', 'Swing UI', 'REST API'],
     type: 'Full Stack',
     live: null,
     github: 'https://github.com/ManthanNaidu',
@@ -123,12 +152,12 @@ export const skills = {
     { name: 'HTML/CSS', level: 88 },
   ],
   'Full Stack': [
-    { name: 'Spring Boot', level: 88 },
-    { name: 'React.js', level: 82 },
     { name: 'REST APIs', level: 90 },
-    { name: 'Hibernate/JPA', level: 80 },
     { name: 'MySQL', level: 85 },
     { name: 'MongoDB', level: 70 },
+    { name: 'JDBC', level: 80 },
+    { name: 'Thymeleaf', level: 75 },
+    { name: 'Servlet/JSP', level: 72 },
   ],
   'AI / ML': [
     { name: 'Scikit-learn', level: 85 },
@@ -183,7 +212,7 @@ export const certifications = [
 
 export const stats = [
   { value: '8.91', label: 'CGPA / 10', suffix: '' },
-  { value: '10', label: 'Projects Built', suffix: '+' },
-  { value: '2', label: 'Internships', suffix: '' },
-  { value: '5', label: 'Certifications', suffix: '+' },
+  { value: '7',    label: 'Projects Built', suffix: '+' },
+  { value: '2',    label: 'Internships', suffix: '' },
+  { value: '5',    label: 'Certifications', suffix: '+' },
 ];

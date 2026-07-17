@@ -60,9 +60,10 @@ export default function Skills() {
         {/* Tech tag cloud */}
         <div className="mt-10 flex flex-wrap justify-center gap-2">
           {[
-            'Java','Spring Boot','React.js','Python','TensorFlow','Scikit-learn',
-            'MySQL','MongoDB','REST API','Hibernate','Pandas','NumPy',
-            'Git','Docker','Postman','Streamlit','NLP','XGBoost',
+            'Java','Python','JavaScript','SQL','HTML/CSS',
+            'REST API','MySQL','MongoDB','JDBC','Thymeleaf','Servlet/JSP',
+            'Scikit-learn','TensorFlow','Pandas','NumPy','NLP','XGBoost',
+            'Git','Docker','Postman','Streamlit','Plotly','Jupyter',
           ].map((tech) => (
             <span
               key={tech}

@@ -1,4 +1,4 @@
-import { ArrowDown, Link2, Mail, MapPin, Code2, Brain } from 'lucide-react';
+import { ArrowDown, Link2, Mail, MapPin, Code2, Brain, Camera } from 'lucide-react';
 import { personal, stats } from '../data/portfolio';
 
 export default function Hero() {
@@ -30,10 +30,46 @@ export default function Hero() {
           </div>
         )}
 
-        {/* Avatar initials */}
-        <div className="w-24 h-24 rounded-2xl bg-gradient-to-br from-blue-600 to-indigo-700 flex items-center justify-center shadow-xl mb-6 ring-4 ring-white">
-          <span className="text-3xl font-black text-white font-['Sora']">M</span>
+        {/* ── Profile photo / placeholder ───────────────────────────── */}
+        <div className="relative mb-6 group">
+          {personal.photo ? (
+            /* ── Actual photo (set personal.photo = '/profile.jpg' in portfolio.js) ── */
+            <img
+              src={personal.photo}
+              alt={personal.name}
+              className="w-28 h-28 rounded-2xl object-cover shadow-xl ring-4 ring-white border border-gray-200"
+            />
+          ) : (
+            /* ── Placeholder shown until you add a photo ── */
+            <div className="w-28 h-28 rounded-2xl bg-gradient-to-br from-blue-100 to-indigo-100 border-2 border-dashed border-blue-300 flex flex-col items-center justify-center shadow-sm relative overflow-hidden">
+              {/* Initials fallback */}
+              <span className="text-3xl font-black text-blue-600 font-['Sora'] select-none">
+                M
+              </span>
+              {/* Hover overlay with instruction */}
+              <div className="absolute inset-0 bg-blue-600/90 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-200 rounded-2xl">
+                <Camera className="w-5 h-5 text-white mb-1" />
+                <span className="text-white text-[9px] font-bold text-center leading-tight px-1">
+                  Add photo<br />in portfolio.js
+                </span>
+              </div>
+            </div>
+          )}
+
+          {/* Status dot */}
+          <span className="absolute -bottom-1 -right-1 w-4 h-4 rounded-full bg-emerald-400 border-2 border-white shadow-sm" />
         </div>
+
+        {/* How to add photo — small hint text shown only when no photo */}
+        {!personal.photo && (
+          <p className="text-[10px] text-gray-400 -mt-3 mb-4 font-medium">
+            📸 Drop your photo at{' '}
+            <code className="bg-gray-100 px-1.5 py-0.5 rounded text-gray-600 font-mono">public/profile.jpg</code>
+            {' '}then set{' '}
+            <code className="bg-gray-100 px-1.5 py-0.5 rounded text-gray-600 font-mono">photo: '/profile.jpg'</code>
+            {' '}in portfolio.js
+          </p>
+        )}
 
         {/* Name */}
         <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-gray-900 leading-tight mb-3">
@@ -43,7 +79,7 @@ export default function Hero() {
         {/* Dual role badges */}
         <div className="flex flex-wrap items-center justify-center gap-3 mb-5">
           <span className="flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-blue-100 text-blue-800 text-sm font-semibold border border-blue-200">
-            <Code2 className="w-3.5 h-3.5" /> Java Full Stack Developer
+            <Code2 className="w-3.5 h-3.5" /> Java Developer
           </span>
           <span className="text-gray-300 hidden sm:block">·</span>
           <span className="flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-indigo-100 text-indigo-800 text-sm font-semibold border border-indigo-200">
@@ -98,7 +134,7 @@ export default function Hero() {
 
         {/* Stats row */}
         <div className="flex flex-wrap justify-center gap-px bg-gray-200 rounded-2xl overflow-hidden shadow-sm border border-gray-200 w-full max-w-2xl">
-          {stats.map((stat, i) => (
+          {stats.map((stat) => (
             <div
               key={stat.label}
               className="flex-1 min-w-[100px] flex flex-col items-center gap-0.5 py-4 px-3 bg-white"
@@ -112,7 +148,7 @@ export default function Hero() {
         </div>
 
         {/* Scroll indicator */}
-        <a href="#about" className="mt-12 flex flex-col items-center gap-2 text-gray-400 hover:text-blue-500 transition-colors text-xs font-medium">
+        <a href="#skills" className="mt-12 flex flex-col items-center gap-2 text-gray-400 hover:text-blue-500 transition-colors text-xs font-medium">
           <span>Scroll down</span>
           <ArrowDown className="w-4 h-4 animate-bounce" />
         </a>
